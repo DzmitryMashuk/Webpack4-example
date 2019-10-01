@@ -1,7 +1,7 @@
 const path = require('path');
 
 let conf = {
-    entry: './src/index.js',
+    entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'main.js',
@@ -18,6 +18,14 @@ let conf = {
                 use: {
                     loader: "babel-loader"
                 }
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     }

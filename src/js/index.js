@@ -1,3 +1,5 @@
+import style from '../scss/style.scss';
+
 let merge = (a, b) => {
     return {
         ...a,
