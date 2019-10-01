@@ -23,6 +23,8 @@ let conf = {
     }
 };
 
-module.exports = () => {
+module.exports = (env, options) => {
+    conf.devtool = options.mode === 'production' ? false : 'eval-sourcemap';
+
     return conf;
 };
